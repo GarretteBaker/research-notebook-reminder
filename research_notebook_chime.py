@@ -25,11 +25,11 @@ def main():
         f"Research Log Reminder started at {start_time.strftime('%Y-%m-%d %H:%M:%S')}. Will play {SOUND_FILE} every 15 minutes. Press Ctrl+C to exit."
     )
 
+    print(f"Time started: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     try:
         while True:
             if last_log_time:
                 print(f"Last log time: {last_log_time.strftime('%Y-%m-%d %H:%M:%S')}")
-            print(f"Time started: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
             time.sleep(interval)
             play_chime()
             last_log_time = datetime.now()
